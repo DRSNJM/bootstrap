@@ -12,7 +12,20 @@
 }
 
 #main-wrapper {
-  margin-top: @navbarHeight + 20px;
+  margin: @navbarHeight 0 0 0;
+}
+
+#recommend {
+  #sidebar {
+    min-height: 150px;
+  }
+  ul#select li {
+    cursor: pointer;
+  }
+}
+
+.btn-group.tri-state .btn.option {
+  min-width: 13em;
 }
 
 .players, .length, .tags {
