@@ -1,10 +1,6 @@
 @import "bootstrap";
 @import "responsive";
 
-#main-wrapper {
-  margin: @navbarHeight 0 0 0;
-}
-
 .navbar-fixed-top {
   margin-bottom: 0;
 }
@@ -12,5 +8,59 @@
 @media (max-width: @navbarCollapseWidth) {
   #main-wrapper {
     margin-top: 0;
+  }
+}
+
+#main-wrapper {
+  margin-top: @navbarHeight + 20px;
+}
+
+.players, .length, .tags {
+  clear: left;
+}
+
+.selection {
+  float: left;
+  position: relative;
+  height: 84px;
+  width: 100px;
+
+  .icon {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .icon.player {
+    background: url("/img/player_icon.png") no-repeat;
+  }
+
+  .icon.player.active {
+    background: url("/img/player_icon_selected.png") no-repeat;
+  }
+
+  .icon.time {
+    background: url("/img/hourglass.png") no-repeat;
+    width: 44px;
+  }
+  .icon.time.active {
+    background: url("/img/hourglass_selected.png") no-repeat;
+  }
+
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .bottom-label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
   }
 }
