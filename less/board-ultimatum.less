@@ -22,6 +22,12 @@
   ul#select li {
     cursor: pointer;
   }
+
+  #game-params {
+    .param {
+      overflow: hidden;
+    }
+  }
 }
 
 .btn-group.tri-state .btn.option {
@@ -34,17 +40,16 @@
 
 .selection {
   float: left;
-  position: relative;
   height: 84px;
   width: 100px;
+
+  label {
+    cursor: pointer;
+  }
 
   .icon {
     height: 64px;
     width: 64px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     margin: 0 auto;
   }
 
@@ -70,10 +75,6 @@
   }
 
   .bottom-label {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
     text-align: center;
   }
 }
