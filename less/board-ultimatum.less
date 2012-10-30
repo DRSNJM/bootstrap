@@ -10,9 +10,12 @@
     margin-top: 0;
   }
 }
+@wrapperMinWidthForMagin: @navbarCollapseWidth + 1px;
 
-#main-wrapper {
-  margin: @navbarHeight 0 0 0;
+@media (min-width: @wrapperMinWidthForMagin) {
+  #main-wrapper {
+    margin: @navbarHeight 0 0 0;
+  }
 }
 
 #recommend {
@@ -81,4 +84,22 @@
 
 .form-inline {
   margin: 0;
+}
+
+ol.row-fluid, ol.row {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-unit.small {
+  padding: 20px;
+  margin-bottom: 10px;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1em;
+  }
+}
+
+footer#footer {
+  margin: 25px 0 0 0;
+  text-align: center;
 }
