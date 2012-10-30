@@ -35,3 +35,5 @@ nbproject
 .idea
 node_modules
 dist
+# Ignore boostrap folder at all times even though it is removed during build.
+/bootstrap
