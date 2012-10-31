@@ -37,8 +37,36 @@
   }
 }
 
+#expert-select {
+  .game {
+    cursor: pointer;
+    background: #eee;
+    border: 2px solid #ddd;
+    .border-radius(12px);
+    padding: 24px 16px 12px;
+    margin-bottom: @gridGutterWidth;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      max-width: 175px;
+      .img-polaroid;
+    }
+
+    @selectBlue: lighten(desaturate(@blue, 20%), 45%);
+
+    &.selected {
+      background-color: @selectBlue;
+      border-color: darken(@selectBlue, 7%);
+      text-shadow: 1px 1px 1px @grayLighter;
+    }
+  }
+
+}
+
 #expert-choices {
   .hero-unit {
+    .clearfix;
     a.btn {
       float: right;
     }
