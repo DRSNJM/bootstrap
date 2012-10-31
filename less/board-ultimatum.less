@@ -43,14 +43,31 @@
     background: #eee;
     border: 2px solid #ddd;
     .border-radius(12px);
-    padding: 24px 16px 12px;
+    padding: 24px 16px 2px;
     margin-bottom: @gridGutterWidth;
     text-align: center;
 
+    @imageWidth: 160px;
+    @imageHeight: 150px;
     img {
       margin: 0 auto;
-      max-width: 160px;
+      max-width: @imageWidth;
+      max-height: @imageHeight;
       .img-polaroid;
+    }
+    .image-wrapper {
+      width: @imageWidth + 10px;
+      height: @imageHeight + 10px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    h5 {
+      margin: 10px 0;
+      height: 40px;
+      width: 170px;
+      display: table-cell;
+      vertical-align: middle;
     }
 
     @selectBlue: lighten(desaturate(@blue, 20%), 45%);
