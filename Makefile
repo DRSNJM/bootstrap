@@ -9,7 +9,7 @@ HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\
 ifeq ($(UNAME), Darwin)
 ECHO=echo
 else
-ECHO=echo -e
+ECHO=/usr/bin/env echo -e
 endif
 
 
