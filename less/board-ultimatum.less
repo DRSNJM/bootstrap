@@ -39,19 +39,28 @@
   }
 }
 
-#expert-select {
+#expert-select, #expert-compare {
   .game {
-    cursor: pointer;
-    background: #eee;
-    border: 2px solid #ddd;
-    .border-radius(12px);
-    padding: 24px 16px 2px;
-    margin-bottom: @gridGutterWidth;
     text-align: center;
 
     img {
       .img-polaroid;
     }
+  }
+}
+
+.gameish {
+  border: 2px solid #ddd;
+  background: #eee;
+  .border-radius(12px);
+  padding: 24px 16px 2px;
+  margin-bottom: @gridGutterWidth;
+}
+
+#expert-select {
+  .game {
+    cursor: pointer;
+    .gameish;
 
     @selectBlue: lighten(desaturate(@blue, 20%), 45%);
 
@@ -61,7 +70,43 @@
       text-shadow: 1px 1px 1px @grayLighter;
     }
   }
+}
 
+#expert-compare {
+  .rate-games {
+    .gameish;
+    .clearfix;
+  }
+
+  .game {
+    margin-bottom: 0;
+  }
+
+  .rating {
+    font-size: 1.5em;
+  }
+
+  .rating-slider {
+    margin: 2.8em 0 0;
+    padding: .3em .6em;
+  }
+
+  .ui-slider {
+    @grayLevel: 84;
+    .box-shadow(0 0 2em rgba(@grayLevel, @grayLevel, @grayLevel, 0.27));
+  }
+
+  .ui-slider-tooltip .ttContent {
+    font-size: 0.9em;
+    font-weight: 700;
+  }
+
+  .ui-slider-label {
+    font-size: 0.7em;
+    font-weight: 700;
+    color: @grayDark;
+    text-shadow: 1px 1px 0 #fcfcfc;
+  }
 }
 
 #expert-choices {
